@@ -1,0 +1,28 @@
+.shcard-wrapper{
+  background-color: black;
+  width: 25%;
+  margin: 1em;
+  padding: .5em;
+}
+
+.shcard-image{
+  width: 100%;
+}
+
+.shcard-info{
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+  padding: .2em;
+}
+
+.shcard-title{
+  color: white;
+  font-weight: bolder;
+  margin-right: .4em;
+}
+
+.link{
+  text-decoration: none;
+}

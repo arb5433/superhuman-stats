@@ -46,14 +46,17 @@ const Heros = () => {
 
 
   return (
-    <div>
+    <div className='villains-page-wrapper'>
       <div className='alignment'>
-        <div className='hero-toggle' onClick={herosClick}>Hero</div>
-        <div className='villain-active'>Villain</div>
+        <div className='hero-toggle clickable' onClick={herosClick}>Hero</div>
+        <div className='villain-active clickable'>Villain</div>
+        <div className='filler'/>
       </div>
-      {villains && villains.map(villain => (
-        <SHCard superhuman={villain} key={villain.id}/>
-      ))}
+      <div className='villains-wrapper'>
+        {villains && villains.map(villain => (
+          <SHCard superhuman={villain} key={villain.id}/>
+        ))}
+      </div>
     </div>
   )
 }

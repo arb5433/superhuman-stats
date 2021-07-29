@@ -27,7 +27,6 @@ const Heros = () => {
       const allSupers = await response.json();
       setAllSuperHumans(allSupers);
     }
-    console.log('UseEffect 2')
     if (!allSuperHumans) fetchHeros();
     if (!heros) {
       let selectSupers;
@@ -44,16 +43,18 @@ const Heros = () => {
     history.push(`/${universe}/villains`)
   }
 
-
   return (
-    <div>
+    <div className='heros-page-wrapper'>
       <div className='alignment'>
-        <div className='hero-active'>Hero</div>
-        <div className='villain-toggle' onClick={villainClick}>Villain</div>
+        <div className='hero-active clickable'>Hero</div>
+        <div className='villain-toggle clickable' onClick={villainClick}>Villain</div>
+        <div className='filler'/>
       </div>
-      {heros && heros.map(hero => (
-        <SHCard superhuman={hero} key={hero.id}/>
-      ))}
+      <div className='heros-wrapper'>
+        {heros && heros.map(hero => (
+          <SHCard superhuman={hero} key={hero.id}/>
+        ))}
+      </div>
     </div>
   )
 }

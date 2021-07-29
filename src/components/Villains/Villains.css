@@ -1,0 +1,47 @@
+.villains-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  background: radial-gradient(blue, red);
+}
+
+.alignment{
+  display: flex;
+  color: white;
+  font-size: xx-large;
+}
+
+.villains-page-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2em;
+}
+
+.villain-active{
+  background: linear-gradient(darkred, red);
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  text-align: center;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.hero-toggle{
+  padding-left: .5em;
+  padding-right: .5em;
+  background-color: rgb(43, 33, 131);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 2px solid black;
+}
+
+.filler{
+  width: 100%;
+  border-bottom: 2px solid black;
+}

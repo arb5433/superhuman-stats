@@ -1,14 +1,18 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
 
+import './SHCard.css';
+
 const SHCard = ({superhuman}) => {
   return (
-    <NavLink className='shcard-wrapper' to={`/superhumans/${superhuman.id}`}>
-      <img className='shcard-image' src={superhuman.images.sm} alt='superhuman-pic-small'/>
-      <div className='shcard-name'>{`Name : ${superhuman.name}`}</div>
-      <div className='shcard-appearance'>{superhuman.biography.firstAppearance}</div>
-      <div className='shcard-publisher'>{superhuman.biography.publisher}</div>
-    </NavLink>
+    <div className='shcard-wrapper'>
+      <NavLink className='link' to={`/superhumans/${superhuman.id}`}>
+        <img className='shcard-image' src={superhuman.images.sm} alt='superhuman-pic-small'/>
+        <div className='shcard-info'><div className='shcard-title'>Name :</div>{superhuman.name}</div>
+        <div className='shcard-info'><div className='shcard-title'>Race :</div>{superhuman.appearance.race ? superhuman.appearance.race : 'N/A'}</div>
+        <div className='shcard-info'><div className='shcard-title'>Publisher :</div>{superhuman.biography.publisher ? superhuman.biography.publisher : 'N/A'}</div>
+      </NavLink>
+    </div>
   )
 };
 

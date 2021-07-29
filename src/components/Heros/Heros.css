@@ -1,0 +1,47 @@
+.heros-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  background: radial-gradient(red, blue);
+}
+
+.alignment{
+  display: flex;
+  color: white;
+  font-size: xx-large;
+}
+
+.heros-page-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2em;
+}
+
+.hero-active{
+  background: linear-gradient(darkblue, blue);
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  text-align: center;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.villain-toggle{
+  padding-left: .5em;
+  padding-right: .5em;
+  background-color: rgb(99, 44, 44);
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+}
+
+.filler{
+  width: 100%;
+  border-bottom: 2px solid black;
+}

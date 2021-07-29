@@ -1,1 +1,21 @@
-/* TODO Add site wide styles */
+body{
+  height: 100vh;
+  background: radial-gradient(black,rgb(75, 74, 74));
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.navbar{
+  width: 100%;
+  background-image: url('./Superhuman\ Stats.png');
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
