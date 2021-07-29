@@ -4,8 +4,10 @@ import {useHistory, useParams} from 'react-router-dom';
 import './Heros.css';
 
 const Heros = () => {
+
   const history = useHistory();
   const {universe} = useParams();
+
   const [allSuperHumans, setAllSuperHumans] = useState('')
   const [heros, setHeros] = useState('');
   const [publisher, setPublisher] = useState('');
@@ -35,14 +37,18 @@ const Heros = () => {
       }
       setHeros(selectSupers)
     }
-  }, [allSuperHumans,publisher, heros])
+  }, [allSuperHumans,publisher, heros]);
+
+  const villainClick = () => {
+    history.push(`/${universe}/villains`)
+  }
 
 
   return (
     <div>
       <div className='alignment'>
-        <div>Hero</div>
-        <div>Villain</div>
+        <div className='hero-active'>Hero</div>
+        <div className='villain-toggle' onClick={villainClick}>Villain</div>
       </div>
       {heros && heros.map(hero => (
         <div key={hero.id}>{hero.id}</div>
