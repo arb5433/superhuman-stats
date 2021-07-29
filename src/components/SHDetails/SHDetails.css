@@ -1,0 +1,133 @@
+.stats-info, .bio-info, .top-wrapper{
+  display: flex;
+  color: white;
+}
+
+.top-wrapper{
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.superhuman-image{
+  width: 50%;
+  margin: 3em;
+  border: 3px groove black;
+}
+
+.stats{
+  width: 100%;
+  margin: 3em 3em 3em 0;
+  box-sizing: border-box;
+  border: 3px double black;
+}
+
+.name-title{
+  font-weight: bolder;
+  text-shadow: 2px 2px black;
+  font-size: 2em;
+  text-align: center;
+  margin: .5em;
+}
+
+.bio-general-title{
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 1em;
+  color: white;
+  text-align: start;
+  text-shadow: 2px 2px black;
+}
+
+.stats-info{
+  font-size: large;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.bio-title{
+  font-size: large;
+  width: 20%;
+  text-align: start;
+}
+
+.stats-info-wrapper{
+  margin: 3em;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.additional-info-wrapper{
+  width: 90%;
+  text-align: center;
+  border: 3px double black;
+  box-sizing: border-box;
+}
+
+.display-page-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-info{
+  width: 100%;
+  margin: 2em;
+  box-sizing: border-box;
+  text-align: start;
+}
+
+.bio-body{
+  width: 70%;
+}
+
+.navigation-btns{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bolder;
+  color: white;
+  width: 90%;
+  margin: 1em 5%;
+  text-shadow: 2px 2px black;
+  padding-bottom: 1em;
+}
+
+.error{
+  width: 90%;
+  margin: 3em 5%;
+  background-color: darkgray;
+  color: darkred;
+  font-size: xx-large;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 black;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px ridge red;
+}
+
+.nav-btn{
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  padding: .1em;
+}
+
+.nav-btn:hover{
+  border: 3px solid black;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 0 darkgray;
+
+}
+
+

@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch, NavLink} from 'react-router-dom';
 import Home from './components/Home';
 import Heros from './components/Heros';
 import Villains from './components/Villains';
+import SHDetails from './components/SHDetails';
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path='/:universe/villains' exact={true}>
               <Villains/>
+            </Route>
+            <Route path='/superhumans/:id'>
+              <SHDetails/>
             </Route>
           </Switch>
         </div>
