@@ -31,6 +31,7 @@ const SHDetails = () => {
     }
   },[superhuman]);
 
+  // onClick handlers
   const nextClick = () => {
     const newId = Number(id) + 1;
     setSuperhuman('')
@@ -42,7 +43,6 @@ const SHDetails = () => {
     setSuperhuman('')
     history.push(`/superhumans/${newId}`)
   }
-
 
   return (
     <>

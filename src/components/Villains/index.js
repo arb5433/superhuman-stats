@@ -36,14 +36,12 @@ const Heros = () => {
       }
       setVillains(selectSupers)
     }
-    console.log(allSuperHumans)
-    console.log(villains)
   }, [allSuperHumans,publisher, villains]);
 
+  // onClick handler
   const herosClick = () => {
     history.push(`/${universe}/heros`)
   }
-
 
   return (
     <div className='villains-page-wrapper'>

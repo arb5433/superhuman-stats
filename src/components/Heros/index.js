@@ -39,6 +39,7 @@ const Heros = () => {
     }
   }, [allSuperHumans,publisher, heros]);
 
+  // onClick handler
   const villainClick = () => {
     history.push(`/${universe}/villains`)
   }
