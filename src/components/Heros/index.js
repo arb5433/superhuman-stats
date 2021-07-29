@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
+import SHCard from '../SHCard';
 
 import './Heros.css';
 
@@ -51,7 +52,7 @@ const Heros = () => {
         <div className='villain-toggle' onClick={villainClick}>Villain</div>
       </div>
       {heros && heros.map(hero => (
-        <div key={hero.id}>{hero.id}</div>
+        <SHCard superhuman={hero} key={hero.id}/>
       ))}
     </div>
   )

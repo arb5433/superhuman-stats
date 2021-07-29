@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
+import SHCard from '../SHCard';
 
 import './Villains.css';
 
@@ -51,7 +52,7 @@ const Heros = () => {
         <div className='villain-active'>Villain</div>
       </div>
       {villains && villains.map(villain => (
-        <div key={villain.id}>{villain.id}</div>
+        <SHCard superhuman={villain} key={villain.id}/>
       ))}
     </div>
   )
