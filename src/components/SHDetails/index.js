@@ -3,13 +3,19 @@ import { useParams, useHistory } from 'react-router-dom';
 
 import './SHDetails.css';
 
-const SHDetails = () => {
+const SHDetails = ({ids}) => {
   const history = useHistory();
   const {id} = useParams();
 
   const [superhuman, setSuperhuman] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
   const [secondaryColor, setSecondaryColor] = useState('');
+  const [reference, setReference] = useState('')
+
+  // the very first render of the page will ensure that the app is scrolled to the top
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  },[])
 
   // fetch the data for the specific superhuman
   useEffect(() => {
@@ -31,17 +37,37 @@ const SHDetails = () => {
     }
   },[superhuman]);
 
+  // utilizing props passed down on click events we can limit the amount of times that we need to fetch
+  // this is setting up a reference list of ids so that we will not hit a id without any data while scrolling
+  useEffect(() => {
+    if (!ids){
+      const fetchAllIds = async() => {
+        const response = await fetch(`https://akabab.github.io/superhero-api/api/all.json`)
+        const allSupers = await response.json();
+        setReference(allSupers.map(superhuman => superhuman.id))
+      }
+      if (!reference) fetchAllIds();
+    }
+  },[ids])
+
   // onClick handlers
   const nextClick = () => {
-    const newId = Number(id) + 1;
+    let newId = Number(id) + 1;
+    // simple while statements to help ensure that we dont get blank data
+    while (!reference.includes(newId)){
+      newId++;
+    }
     setSuperhuman('')
-    history.push(`/superhumans/${newId}`)
+    history.push(`/superhumans/${newId}`, ids={reference})
   }
 
   const prevClick = () => {
-    const newId = id - 1;
+    let newId = id - 1;
+    while(!reference.includes(newId)){
+      newId--;
+    }
     setSuperhuman('')
-    history.push(`/superhumans/${newId}`)
+    history.push(`/superhumans/${newId}`, ids=reference)
   }
 
   return (

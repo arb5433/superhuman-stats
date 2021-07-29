@@ -10,6 +10,7 @@ const Heros = () => {
   const {universe} = useParams();
 
   const [allSuperHumans, setAllSuperHumans] = useState('')
+  // save the master list and the filtered list in different slices of state so that we don't alter the master list
   const [heros, setHeros] = useState('');
   const [publisher, setPublisher] = useState('');
   
@@ -17,7 +18,6 @@ const Heros = () => {
   useEffect(() => {
     const formatted = universe === 'Other' ? 'Other' : `${universe} Comics`;
     setPublisher(formatted);
-    console.log('useEffect One')
   },[universe]);
 
   // fetch all superheros, then filer it down to the appropriate list based on selections
