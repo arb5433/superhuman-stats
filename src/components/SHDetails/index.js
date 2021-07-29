@@ -49,22 +49,23 @@ const SHDetails = ({ids}) => {
       }
       if (!reference) fetchAllIds();
     }
-  },[ids])
+  },[ids, reference])
 
   // onClick handlers
   const nextClick = () => {
     let newId = Number(id) + 1;
     // simple while statements to help ensure that we dont get blank data
-    while (!reference.includes(newId)){
+    while (!reference.includes(newId) && newId <= 731){
       newId++;
     }
+    
     setSuperhuman('')
     history.push(`/superhumans/${newId}`, ids={reference})
   }
 
   const prevClick = () => {
     let newId = id - 1;
-    while(!reference.includes(newId)){
+    while(!reference.includes(newId) && newId >= 1){
       newId--;
     }
     setSuperhuman('')
@@ -123,8 +124,8 @@ const SHDetails = ({ids}) => {
         </div>
       )}
       <div className='navigation-btns'>
-        <div className='clickable nav-btn' onClick={prevClick}>Previous</div>
-        <div className='clickable nav-btn' onClick={nextClick}>Next</div>
+        <div className='clickable nav-btn' id='prev' onClick={prevClick}>Previous</div>
+        <div className='clickable nav-btn' id='next' onClick={nextClick}>Next</div>
       </div>
     </>
   )
