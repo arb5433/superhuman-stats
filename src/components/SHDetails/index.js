@@ -121,7 +121,6 @@ const SHDetails = ({ids}) => {
           </div>
         </div>
       )}
-      {!superhuman && (<div className='error'>Whoops! No superhuman assigned to that id, please either continue browsing or click the banner at the top to narrow your searches.</div>)}
       <div className='navigation-btns'>
         <div className='clickable nav-btn' onClick={prevClick}>Previous</div>
         <div className='clickable nav-btn' onClick={nextClick}>Next</div>
