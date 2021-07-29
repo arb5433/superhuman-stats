@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
+import Heros from './components/Heros';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
           <Switch>
             <Route path='/' exact={true}>
               <Home/>
+            </Route>
+            <Route path='/:universe/heros'>
+              <Heros/>
             </Route>
           </Switch>
         </div>
