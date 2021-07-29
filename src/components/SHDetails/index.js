@@ -21,6 +21,7 @@ const SHDetails = ({ids}) => {
   useEffect(() => {
     const fetchSuper = async() => {
       const response = await fetch(`https://akabab.github.io/superhero-api/api/id/${id}.json`);
+      // tried using the cached CDN for the id routes and it seemed to have more lag then
       const superPerson = await response.json();
       setSuperhuman(superPerson);
     }
@@ -42,7 +43,7 @@ const SHDetails = ({ids}) => {
   useEffect(() => {
     if (!ids){
       const fetchAllIds = async() => {
-        const response = await fetch(`https://akabab.github.io/superhero-api/api/all.json`)
+        const response = await fetch(`https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json`)
         const allSupers = await response.json();
         setReference(allSupers.map(superhuman => superhuman.id))
       }
