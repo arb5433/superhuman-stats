@@ -72,6 +72,7 @@ const SHDetails = ({ids}) => {
     history.push(`/superhumans/${newId}`, ids=reference)
   }
   // need to fix the issue where you can scroll over or under
+  // add simple logic to tell when the id is greater then or less then the bounds
 
   return (
     <>
