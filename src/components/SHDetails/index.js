@@ -73,6 +73,7 @@ const SHDetails = ({ids}) => {
   }
   // need to fix the issue where you can scroll over or under
   // add simple logic to tell when the id is greater then or less then the bounds
+  // if the id is greater then or less then reset the id to the opp bound
 
   return (
     <>
