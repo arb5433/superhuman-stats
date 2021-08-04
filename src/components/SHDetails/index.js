@@ -54,6 +54,7 @@ const SHDetails = ({ids}) => {
   // onClick handlers
   const nextClick = () => {
     let newId = Number(id) + 1;
+    if (newId > 731) newId = 1;
     // simple while statements to help ensure that we dont get blank data
     while (!reference.includes(newId) && newId <= 731){
       newId++;
@@ -65,6 +66,7 @@ const SHDetails = ({ids}) => {
 
   const prevClick = () => {
     let newId = id - 1;
+    if (newId < 1) newId = 731;
     while(!reference.includes(newId) && newId >= 1){
       newId--;
     }
